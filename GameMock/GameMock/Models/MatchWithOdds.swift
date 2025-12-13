@@ -11,6 +11,7 @@ import Combine
 struct MatchWithOdds: Identifiable {
 	let match: Match
 	var odds: Odds
+	var lastUpdateTime: Date = Date()
 	
 	var id: Int { match.matchID }
 }

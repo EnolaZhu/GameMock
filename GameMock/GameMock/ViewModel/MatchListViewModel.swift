@@ -6,7 +6,6 @@
 //
 import Foundation
 import Observation
-import Combine
 
 @MainActor
 @Observable
@@ -62,5 +61,6 @@ final class MatchListViewModel {
 	private func apply(_ odds: Odds) {
 		guard let index = matches.firstIndex(where: { $0.match.matchID == odds.matchID }) else { return }
 		matches[index].odds = odds
+		matches[index].lastUpdateTime = Date()
 	}
 }
