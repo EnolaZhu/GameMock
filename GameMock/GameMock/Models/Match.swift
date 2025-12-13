@@ -8,7 +8,6 @@
 import Foundation
 import Combine
 
-// MARK: - Models
 struct Match: Identifiable, Codable {
 	let matchID: Int
 	let teamA: String
@@ -17,21 +16,8 @@ struct Match: Identifiable, Codable {
 	
 	var id: Int { matchID }
 	
-	var startDate: Date {
+	nonisolated var startDate: Date {
 		let formatter = ISO8601DateFormatter()
 		return formatter.date(from: startTime) ?? Date()
 	}
-}
-
-struct Odds: Codable {
-	let matchID: Int
-	let teamAOdds: Double
-	let teamBOdds: Double
-}
-
-struct MatchWithOdds: Identifiable {
-	let match: Match
-	var odds: Odds
-	
-	var id: Int { match.matchID }
 }
