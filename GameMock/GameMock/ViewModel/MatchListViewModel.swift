@@ -6,6 +6,7 @@
 //
 import Foundation
 import Observation
+import QuartzCore
 
 @MainActor
 @Observable
@@ -59,6 +60,10 @@ final class MatchListViewModel {
 	}
 
 	private func apply(_ odds: Odds) {
+		let now = CACurrentMediaTime()
+		let latency = (now - odds.emittedAt) * 1000
+		print("Enola Odds latency: \(Int(latency)) ms")
+
 		guard let index = matches.firstIndex(where: { $0.match.matchID == odds.matchID }) else { return }
 		matches[index].odds = odds
 		matches[index].lastUpdateTime = Date()

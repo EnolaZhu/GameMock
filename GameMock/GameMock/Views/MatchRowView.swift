@@ -15,7 +15,14 @@ struct MatchRowView: View {
 	let matchWithOdds: MatchWithOdds
 	private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 	
+	init(matchWithOdds: MatchWithOdds) {
+		self.matchWithOdds = matchWithOdds
+		print("Enola Row init: \(matchWithOdds.match.matchID)")
+	}
+	
 	var body: some View {
+		let _ = print("Enola redraw row \(matchWithOdds.match.matchID)")
+
 		VStack(spacing: 12) {
 			// Match Header
 			HStack {
@@ -36,14 +43,14 @@ struct MatchRowView: View {
 						Text("•")
 							.font(.caption2)
 						
-						// 賠率更新時間
-						HStack(spacing: 4) {
-							Image(systemName: "arrow.clockwise")
-								.font(.caption2)
-							Text(formattedUpdateTime)
-								.font(.caption2)
-						}
-						.foregroundColor(.green)
+//						// 賠率更新時間
+//						HStack(spacing: 4) {
+//							Image(systemName: "arrow.clockwise")
+//								.font(.caption2)
+//							Text(formattedUpdateTime)
+//								.font(.caption2)
+//						}
+//						.foregroundColor(.green)
 					}
 					.foregroundColor(.secondary)
 				}
