@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-	@State private var viewModel = MatchListViewModel()
+	@State private var viewModel: MatchListViewModel
+
+	init(viewModel: MatchListViewModel) {
+		_viewModel = State(initialValue: viewModel)
+	}
 	
 	var body: some View {
 		NavigationView {

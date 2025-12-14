@@ -11,7 +11,7 @@ import Observation
 @Observable
 final class MatchListViewModel {
 
-	enum State {
+	enum State: Equatable {
 		case idle
 		case loading
 		case loaded
