@@ -214,6 +214,6 @@ This project is intended as:
 ## Demo video
 
 
-https://github.com/user-attachments/assets/2bbe90b3-a25d-4ddb-8b1c-b2647ea4cd45
+https://github.com/user-attachments/assets/ff6c1d7a-37a7-43d6-818c-c53983393bc6
 
 
