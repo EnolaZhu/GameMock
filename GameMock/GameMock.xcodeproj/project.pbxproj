@@ -29,6 +29,23 @@
 		187CFF292EED3EAF00A6EFBA /* GameMockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameMockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		18CB44722EEE6FBE00C90DA0 /* Exceptions for "GameMockTests" folder in "GameMock" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MockMatchRepository.swift,
+			);
+			target = 187CFF112EED3EAC00A6EFBA /* GameMock */;
+		};
+		18CB44732EEE6FBE00C90DA0 /* Exceptions for "GameMockTests" folder in "GameMockTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MockMatchRepository.swift,
+			);
+			target = 187CFF1E2EED3EAF00A6EFBA /* GameMockTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		187CFF142EED3EAC00A6EFBA /* GameMock */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -37,6 +54,10 @@
 		};
 		187CFF222EED3EAF00A6EFBA /* GameMockTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				18CB44722EEE6FBE00C90DA0 /* Exceptions for "GameMockTests" folder in "GameMock" target */,
+				18CB44732EEE6FBE00C90DA0 /* Exceptions for "GameMockTests" folder in "GameMockTests" target */,
+			);
 			path = GameMockTests;
 			sourceTree = "<group>";
 		};
