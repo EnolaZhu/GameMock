@@ -41,11 +41,6 @@ struct ContentView: View {
 						LazyVStack(spacing: 12) {
 							ForEach(viewModel.matches) { matchWithOdds in
 								MatchRowView(matchWithOdds: matchWithOdds)
-									.id(MatchCellIdentity(
-										matchID: matchWithOdds.match.matchID,
-										teamAOdds: matchWithOdds.odds.teamAOdds,
-										teamBOdds: matchWithOdds.odds.teamBOdds
-									))
 							}
 						}
 						.padding()

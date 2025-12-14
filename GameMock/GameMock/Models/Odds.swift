@@ -7,9 +7,11 @@
 
 import Foundation
 import Combine
+import QuartzCore
 
 struct Odds: Codable {
 	let matchID: Int
 	let teamAOdds: Double
 	let teamBOdds: Double
+	var emittedAt: CFTimeInterval = CACurrentMediaTime()
 }
