@@ -43,14 +43,14 @@ struct MatchRowView: View {
 						Text("•")
 							.font(.caption2)
 						
-						// 賠率更新時間
-						HStack(spacing: 4) {
-							Image(systemName: "arrow.clockwise")
-								.font(.caption2)
-							Text(formattedUpdateTime)
-								.font(.caption2)
-						}
-						.foregroundColor(.green)
+//						// 賠率更新時間
+//						HStack(spacing: 4) {
+//							Image(systemName: "arrow.clockwise")
+//								.font(.caption2)
+//							Text(formattedUpdateTime)
+//								.font(.caption2)
+//						}
+//						.foregroundColor(.green)
 					}
 					.foregroundColor(.secondary)
 				}
